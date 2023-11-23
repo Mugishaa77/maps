@@ -1,0 +1,52 @@
+.App {
+  position: relative;
+}
+
+.tea-maps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  /* Adjust the gap as needed */
+  position: relative;
+}
+
+.tea-maps img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.overlay {
+  position: fixed;
+  /* or 'absolute' depending on your preference */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 47, 127, 0.5);
+  /* Adjust the alpha value for the desired opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  z-index: 2;
+  /* Ensure the overlay appears above the tea-maps */
+}
+
+/* Hover effect: reduce the opacity on hover */
+.tea-maps:hover img {
+  opacity: 0.4;
+  /* Adjust the opacity value as needed */
+}
+
+.services {
+  position: relative;
+  /* To position content within the overlay */
+  z-index: 3;
+  /* Ensure the services div appears above the overlay */
+}
